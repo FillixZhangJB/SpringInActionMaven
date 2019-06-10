@@ -7,6 +7,10 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
  */
 public class SpittrWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
+    /**
+     * identifies one or more paths that DispatcherServlet will be mapped to.
+     * @return
+     */
     protected String[] getServletMappings() {
         return new String[]{"/"};
     }
