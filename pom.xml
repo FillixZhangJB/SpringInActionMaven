@@ -11,6 +11,7 @@
 
     <properties>
         <org.springframework.version>4.2.0.RELEASE</org.springframework.version>
+        <druid-version>1.1.9</druid-version>
     </properties>
     <dependencies>
         <!-- spring start -->
@@ -142,6 +143,33 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
+
+        <!--Spring Security Start-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <!--Spring Security End-->
+
+        <!-- mysql 的jar -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.11</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid-version}</version>
+        </dependency>
+
     </dependencies>
     <build>
         <pluginManagement>

@@ -13,7 +13,7 @@ import webMVC.exceptions.MyException;
 @RequestMapping("/")
 public class HomeController {
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
     @ResponseBody
     public String hello() {
         return "home";

@@ -2,6 +2,8 @@ package webMVC.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import javax.servlet.Filter;
+
 /**
  * Created by zjb on 2019/5/31.
  */
@@ -9,6 +11,7 @@ public class SpittrWebAppInitializer extends AbstractAnnotationConfigDispatcherS
 
     /**
      * identifies one or more paths that DispatcherServlet will be mapped to.
+     *
      * @return
      */
     protected String[] getServletMappings() {
@@ -21,5 +24,11 @@ public class SpittrWebAppInitializer extends AbstractAnnotationConfigDispatcherS
 
     protected Class<?>[] getRootConfigClasses() {
         return new Class<?>[]{RootConfig.class};
+    }
+
+    //注册filter，mapping到Dispatcherservlet
+    @Override
+    protected Filter[] getServletFilters() {
+        return new Filter[]{new MyDefaultFilter()};
     }
 }
