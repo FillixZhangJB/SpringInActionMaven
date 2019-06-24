@@ -47,23 +47,23 @@ public class MysqlDataSourceConfig {
      *
      * @return
      */
-    @Bean
-    public DataSource driverManagerDataSource() {
-        DriverManagerDataSource dmDS = new DriverManagerDataSource();
-        dmDS.setDriverClassName("jdbc:mysql://localhost:3306/spring4?serverTimezone=GMT%2B8&useSSL=false");
-        dmDS.setUsername("root");
-        dmDS.setPassword("root");
-        return dmDS;
-    }
+//    @Bean
+//    public DataSource driverManagerDataSource() {
+//        DriverManagerDataSource dmDS = new DriverManagerDataSource();
+//        dmDS.setDriverClassName("jdbc:mysql://localhost:3306/spring4?serverTimezone=GMT%2B8&useSSL=false");
+//        dmDS.setUsername("root");
+//        dmDS.setPassword("root");
+//        return dmDS;
+//    }
 
     //内嵌的数据库，schema.sql 定义了如何建立数据库，test-data.sql提供了测试数据；
-    @Bean
-    public DataSource embeddedDataSource() {
-        return new EmbeddedDatabaseBuilder()
-                .setType(EmbeddedDatabaseType.H2)
-                .addScript("classpath:schema.sql")
-                .addScript("classpath:test-data.sql")
-                .build();
-    }
+//    @Bean
+//    public DataSource embeddedDataSource() {
+//        return new EmbeddedDatabaseBuilder()
+//                .setType(EmbeddedDatabaseType.H2)
+//                .addScript("classpath:schema.sql")
+//                .addScript("classpath:test-data.sql")
+//                .build();
+//    }
 }
 

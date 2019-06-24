@@ -30,8 +30,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
 //                .loginPage("/login")//自定义跳转的登录页面
                 .and()  //如果认证或授权不通过，调到默认的登录页面
-                .rememberMe().tokenValiditySeconds(10)
-                .key("key").and()
+//                .rememberMe().tokenValiditySeconds(10)
+//                .key("key")
+//                .and()
                 .authorizeRequests()
                 .antMatchers("/home").authenticated()
                 .antMatchers(HttpMethod.GET, "/custerm").authenticated()
